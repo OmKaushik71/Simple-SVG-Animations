@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+*, *::before, *::after {
+box-sizing: border-box;
+}
+
+img, picture, svg, video {
+display: block;
+max-width: 100%;
+}
+
+input, textarea, button, select {
+font: inherit;
+}
+
+* {
+margin: 0;
+padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    font-family: 'Lobster', cursive;
+    font-size: 3rem;
+}
+
+#tick{
+    height: 300px;
+    width: 300px;
+    fill: transparent;
+    stroke: #3393e8;
+    stroke-dasharray: 67;
+    stroke-dashoffset: 67;
+   
+}
+#tick.tick{
+     animation: 2s ease-in forwards tick;
+}
+@keyframes tick {
+    0%{
+        stroke-dashoffset: 67;
+
+    }
+    100%{
+        stroke-dashoffset: 0;
+
+    }
+   
+    
+}
+
+#download{
+    height: 300px;
+    width: 300px;
+    fill: transparent;
+    stroke: rgb(46, 181, 47);
+    stroke-dasharray: 72;
+    stroke-dashoffset: 72;
+    animation: 2s ease-in 2s forwards down;
+}
+@keyframes down {
+    0%{
+        stroke-dashoffset: 72;
+    }
+    100%{
+        stroke-dashoffset: 0;
+    }
+    
+}
+h1{
+    text-align: center;
+}
+#rotate{
+    height: 300px;
+    width: 300px;
+    stroke: none;
+    animation: 2s ease-in 4s forwards rotation;
+}
+
+@keyframes rotation {
+    0%{
+        stroke: orange;
+        transform: rotate(0deg);
+    }
+   
+    100%{
+        stroke: orange;
+        transform: rotate(360deg);
+    }
+}
+
+.container{
+    /* border: 1px solid black; */
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+@media (max-width: 800px) {
+    body{
+        font-size: 2rem;
+    }
+}
